@@ -1,26 +1,4 @@
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-local localPlayer = Players.LocalPlayer
-
--- Define the paths
-local playerGui = localPlayer:WaitForChild("PlayerGui")
-local shootingContainer = playerGui:WaitForChild("Visual"):WaitForChild("Shooting")
-local powerBar = shootingContainer:WaitForChild("Bar")
-
--- ==========================================
--- FORCE FULL LENGTH LOGIC
--- ==========================================
-local function lockBarSize()
-    -- UDim2.new(ScaleX, OffsetX, ScaleY, OffsetY)
-    -- Setting ScaleX to 1 makes it 100% of the parent's width
-    powerBar.Size = UDim2.new(1, 0, 1, 0)
-end
-
--- Run every frame to override game animations/scripts
-RunService.RenderStepped:Connect(function()
-    if powerBar and powerBar.Parent then
-        lockBarSize()
-    end
-end)
-
-print("Power Bar locked to full length.")
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/3a1cb05b7ebc851ebecdbfb4670531842140d8a3e11e9020a493d31201d69aa3/download"))()
